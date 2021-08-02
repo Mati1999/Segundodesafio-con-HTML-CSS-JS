@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --texto--naranja--fuerte:hsl(353, 100%, 62%);
+    --texto--naranja--claro: hsl(13, 100%, 72%);
+    --texto--azul--oscuro:hsl(237, 17%, 21%);
+    --texto--azul--claro: hsl(237, 23%, 32%);
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+}
+
+/* CONTENEDOR */
+
+.container{
+    margin: 0;
+    padding:0;
+}
+
+/*   HEADER   */
+
+.header{
+    height: 90vh;
+    width: 100vw;
+    background: url(images/bg-pattern-intro.svg),linear-gradient(to bottom, 
+    hsl(13, 100%, 72%)30%,hsl(353, 100%, 62%));
+    background-size: 80rem 80rem;
+    background-repeat: no-repeat;
+    background-position:-18rem -8rem;
+    border-bottom-left-radius: 9rem;
+}
+
+
+/*   NAVBAR   */
+
+.navbar-toggler-icon{
+    color: white;
+    width: 5rem;
+}
+
+.navbar-toggler:focus{
+    box-shadow: 0 0 0 0;
+}
+
+.navbar{
+    margin-right: 1rem;
+}
+
+.navbar-nav{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.13) 0rem 1rem 2rem 1rem;
+}
+
+.navbar-nav a{
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.login{
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+    background: transparent;
+    border: none;
+}
+
+.sing-up{
+    padding-top:.2rem;
+    background: linear-gradient(to right, 
+    hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+    border: none;
+    width: 9rem;
+    height: 3rem;
+    color: var(--texto--naranja--fuerte);
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+
+/*   INTRO   */
+
+.intro{
+    height: 80vh;
+}
+
+.intro h2{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.intro p{
+    margin-top: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.start_learn{
+    width: 100%;
+}
+
+.start{
+    padding-top:.2rem;
+    background: white;
+    border: none;
+    width: 9rem;
+    height: 3rem;
+    color: var(--texto--naranja--fuerte);
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+
+.learn{
+    padding-top:.2rem;
+    background: transparent;
+    border: 2px solid white;
+    width: 9rem;
+    height: 3rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
