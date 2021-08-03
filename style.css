@@ -12,6 +12,8 @@
 }
 
 body{
+    margin: 0;
+    padding: 0;
     font-size: 16px;
     font-family: 'Overpass', sans-serif;
 }
@@ -31,9 +33,8 @@ p{
 
 /* CONTENEDOR */
 
-.container{
-    margin: 0;
-    padding:0;
+.container-fluid{
+    width: auto;
 }
 
 /*   HEADER   */
@@ -47,8 +48,14 @@ p{
     background-repeat: no-repeat;
     background-position:-18rem -8rem;
     border-bottom-left-radius: 9rem;
+    padding: 1rem;
 }
 
+header .container-fluid{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
 
 /*   NAVBAR   */
 
@@ -56,7 +63,8 @@ p{
     background: transparent;
 }
 .navbar-toggler{
-    width: 4rem;
+    width: 3rem;
+    margin-left: 11rem;
 }
 
 .navbar-toggler-icon{
@@ -97,8 +105,14 @@ p{
     margin: 0 auto;
 }
 
+.nav-link{
+    display: flex;
+    justify-content: center
+}
+
 .nav-link ion-icon{
     color: var(--texto--naranja--fuerte);
+    transform: rotate(180deg);
 }
 
 .nav-item{
@@ -157,6 +171,7 @@ text-align: center;
 
 .intro{
     height: 80vh;
+    padding-top: 9rem;
 }
 
 .intro h2{
@@ -306,4 +321,329 @@ footer div > div > a{
     color: rgb(153, 153, 153);
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+/*   METODO DESAPARECER BOTON MENU   */
+
+.desaparecer{
+    display: none;
+}
+
+/* METODO MOVER FLECHA DEL MENU */
+
+.flecha .flechita{
+    transform: rotateZ(0deg)
+}
+
+.flechita{
+    transition: transform .3s;
+}
+
+
+/* ====================================================================================== */
+/*                                       MEDIA QUERY                                      */
+/* ====================================================================================== */
+
+
+@media screen and (min-width: 1200px){
+
+
+    .container-fluid{
+        width: auto;
+    }
+
+
+    /*   HEADER   */
+    .header{
+        height: 65vh;
+        width: 100vw;
+        background: url(images/bg-pattern-intro.svg),linear-gradient(to right, 
+        hsl(13, 100%, 72%)20%,hsl(353, 100%, 62%));
+        background-size: 130rem 130rem;
+        background-repeat: no-repeat;
+        background-position: -10rem -51rem;
+        border-bottom-left-radius: 9rem;
+        padding: 3rem 7rem;
+    }
+
+    header .container-fluid{
+        margin: 0;
+        display: flex;
+        width:100%;
+        justify-content: space-around;
+    }
+
+/*   NAVBAR   */
+
+
+
+    .navbar{
+        background: transparent;
+    }
+    .navbar-toggler{
+        width: 4rem;
+    }
+    
+    .navbar-toggler-icon{
+        color: white;
+        width: 5rem;
+        height: 3rem;
+    }
+    
+    .navbar-toggler:focus{
+        box-shadow: 0 0 0 0;
+    }
+
+    .navbar-collapse{
+        padding: 0rem;
+        margin-top: 0rem;
+        display: flex;
+        align-items: center;
+        background: none;
+        border-radius: 1rem;
+        box-shadow: none;
+    }
+    
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .navbar-nav a{
+        color: white;
+        font-weight: 600;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav li:first-child{
+        margin-left: 3rem;
+    }
+    
+    .nav-link{
+        display: flex;
+        justify-content: center
+    }
+    
+    .nav-link ion-icon{ 
+        height:1.2rem;
+        color: white;
+        transform: rotate(180deg);
+        margin: 0 .5rem;
+    }
+    
+    .nav-item{ 
+        display: flex;
+        align-items: center;
+        width: 10rem;
+        height: 4rem;
+    }
+    
+    .dropdown-menu{
+        text-align: center;
+        border: none;
+        background: rgba(128, 128, 128, 0.170);
+    }
+    
+    
+    
+    .dropdown-menu a{
+        font-weight: 600;
+        color: var(--texto--azul--claro);
+        font-size: 1.1rem;
+        margin: .5rem 0rem
+    }
+    
+    .navbar-nav__botones{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        padding: 0;
+        margin-left: 15rem;
+        margin-top: 0rem;
+        border-top: none;
+    }
+    
+    .login{
+        color: white;
+        font-weight: 600;
+        font-size: 1.3rem;
+        background: transparent;
+        border: none;
+        margin: 0rem 3rem;
+    }
+    
+    .sing-up{
+        padding-top:.2rem;
+        background: white;
+        border: none;
+        width: 9rem;
+        height: 3rem;
+        color: var(--texto--naranja--fuerte);
+        font-weight: 600;
+        font-size: 1.2rem;
+        border-radius: 2rem;
+    }
+    
+/*   INTRO   */
+
+.intro{
+    height: 80vh;
+    width: 100vw;
+}
+
+.intro h2{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.intro p{
+    margin-top: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.start_learn{
+    width: 50%;
+}
+
+.start{
+    padding-top:.2rem;
+    background: white;
+    border: none;
+    width: 10rem;
+    height: 3.5rem;
+    color: var(--texto--naranja--fuerte);
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+
+.learn{
+    padding-top:.2rem;
+    background: transparent;
+    border: 2px solid white;
+    width: 10rem;
+    height: 3.5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+
+/*   MAIN   */
+
+/*   DESIGNED   */
+
+.designed h3{
+    margin: 4rem 0 3rem 0;
+    text-align: center;
+}
+
+.designed .computer{
+    margin-top: 7rem;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.designed img, .computer img{
+    width:50%;
+}
+
+.designed div, .computer div{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 2rem 2rem 2rem;
+}
+
+/*   STATE   */
+
+.state{
+    background: url(images/bg-pattern-circles.svg), var(--texto--azul--oscuro);
+    background-repeat: no-repeat;
+    background-size: 40rem 40rem;
+    background-position: 50% -16rem;
+    border-top-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 15rem;
+    position:relative;
+}
+
+.state img{
+    width: 50%;
+    position:absolute;
+    bottom: 26rem;
+}
+
+.state h3{
+    color: white;
+    font-size: 2.7rem;
+    margin-top: 13rem;
+    margin-bottom: 0;
+}
+
+.state p{
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+
+/*   FOOTER   */
+
+footer{
+    background: var(--texto--azul--oscuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-top-right-radius: 7rem;
+}
+
+footer img{
+    margin: 4rem 0;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+footer div > h5{
+    color: white;
+    font-weight: 600;
+}
+
+footer div > div{
+    margin-top: 1rem;
+}
+
+footer div > div > a{
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 }
