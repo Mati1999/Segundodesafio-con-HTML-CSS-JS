@@ -206,7 +206,12 @@ text-align: center;
 
 /*   DESIGNED   */
 
-.designed{
+.designed h3{
+    margin: 4rem 0 3rem 0;
+    text-align: center;
+}
+
+.designed .computer{
     margin-top: 7rem;
     width:100%;
     display: flex;
@@ -215,11 +220,90 @@ text-align: center;
     justify-content: center;
 }
 
-.designed img{
+.designed img, .computer img{
     width:100%;
 }
 
-.designed div{
+.designed div, .computer div{
     text-align: center;
+    margin-top: 2rem;
     padding: 0 2rem 2rem 2rem;
+}
+
+/*   STATE   */
+
+.state{
+    background: url(images/bg-pattern-circles.svg), var(--texto--azul--oscuro);
+    background-repeat: no-repeat;
+    background-size: 40rem 40rem;
+    background-position: 50% -16rem;
+    border-top-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 15rem;
+    position:relative;
+}
+
+.state img{
+    width: 100%;
+    position:absolute;
+    bottom: 26rem;
+}
+
+.state h3{
+    color: white;
+    font-size: 2.7rem;
+    margin-top: 13rem;
+    margin-bottom: 0;
+}
+
+.state p{
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+
+/*   FOOTER   */
+
+footer{
+    background: var(--texto--azul--oscuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-top-right-radius: 7rem;
+}
+
+footer img{
+    margin: 4rem 0;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+footer div > h5{
+    color: white;
+    font-weight: 600;
+}
+
+footer div > div{
+    margin-top: 1rem;
+}
+
+footer div > div > a{
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+    font-size: 1.2rem;
+    font-weight: 600;
 }
