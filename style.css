@@ -105,6 +105,14 @@ header .container-fluid{
     margin: 0 auto;
 }
 
+.navbar-nav a:hover{
+    color: hsla(237, 18%, 21%, 0.699);
+}
+
+.navbar-nav a:focus{
+    color: hsla(237, 18%, 21%, 0.699);
+}
+
 .nav-link{
     display: flex;
     justify-content: center
@@ -133,6 +141,10 @@ text-align: center;
     color: var(--texto--azul--claro);
     font-size: 1.1rem;
     margin: .5rem 0rem
+}
+
+.dropdown-menu a:hover{
+    color: var(--texto--azul--claro);
 }
 
 .navbar-nav__botones{
@@ -167,6 +179,11 @@ text-align: center;
     border-radius: 2rem;
 }
 
+.sing-up:hover{
+    background: rgba(255, 255, 255, 0.151);
+    color: white;
+}
+
 /*   INTRO   */
 
 .intro{
@@ -191,6 +208,9 @@ text-align: center;
 
 .start_learn{
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4rem;
 }
 
 .start{
@@ -205,6 +225,11 @@ text-align: center;
     border-radius: 2rem;
 }
 
+.start:hover{
+    background: rgba(255, 255, 255, 0.151);
+    color: white;
+}
+
 .learn{
     padding-top:.2rem;
     background: transparent;
@@ -215,6 +240,11 @@ text-align: center;
     font-weight: 600;
     font-size: 1.2rem;
     border-radius: 2rem;
+}
+
+.learn:hover{
+    background: white;
+    color: var(--texto--naranja--fuerte);
 }
 
 /*   MAIN   */
@@ -355,7 +385,7 @@ footer div > div > a{
 
     /*   HEADER   */
     .header{
-        height: 65vh;
+        height: 80vh;
         width: 100vw;
         background: url(images/bg-pattern-intro.svg),linear-gradient(to right, 
         hsl(13, 100%, 72%)20%,hsl(353, 100%, 62%));
@@ -378,6 +408,7 @@ footer div > div > a{
 
 
     .navbar{
+        width: 95%;
         background: transparent;
     }
     .navbar-toggler{
@@ -411,7 +442,7 @@ footer div > div > a{
     }
     
     .navbar-nav a{
-        color: white;
+        color: rgba(255, 255, 255, 0.589);
         font-weight: 600;
         font-size: 1.3rem;
         display: flex;
@@ -419,8 +450,13 @@ footer div > div > a{
         font-size: 1.2rem;
     }
 
-    .navbar-nav li:first-child{
-        margin-left: 3rem;
+    .navbar-nav a:hover{
+        color: white;
+        border-bottom: 1px solid white;
+    }
+
+    .navbar-nav a:focus{
+        color: white;
     }
     
     .nav-link{
@@ -443,19 +479,23 @@ footer div > div > a{
     }
     
     .dropdown-menu{
-        text-align: center;
+        text-align: left;
         border: none;
-        background: rgba(128, 128, 128, 0.170);
+        background: white;
+        padding: 1rem 0;
     }
-    
-    
     
     .dropdown-menu a{
         font-weight: 600;
-        color: var(--texto--azul--claro);
+        color: hsla(237, 18%, 21%, 0.699);
         font-size: 1.1rem;
         margin: .5rem 0rem
     }
+
+    .dropdown-menu a:hover{
+        color: var(--texto--azul--claro);
+    }
+
     
     .navbar-nav__botones{
         width: 60%;
@@ -489,19 +529,25 @@ footer div > div > a{
         font-size: 1.2rem;
         border-radius: 2rem;
     }
+
+    .sing-up:hover{
+        background: rgba(255, 255, 255, 0.151);
+        color: white;
+    }
     
 /*   INTRO   */
 
 .intro{
     height: 80vh;
-    width: 100vw;
+    width: 100%;
+    padding-top: 5rem;
 }
 
 .intro h2{
     text-align: center;
     color: white;
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
 
 .intro p{
@@ -513,11 +559,14 @@ footer div > div > a{
 }
 
 .start_learn{
-    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
 }
 
 .start{
-    padding-top:.2rem;
+    padding-top:0;
     background: white;
     border: none;
     width: 10rem;
@@ -526,10 +575,12 @@ footer div > div > a{
     font-weight: 600;
     font-size: 1.2rem;
     border-radius: 2rem;
+    margin-right: 1.5rem;
 }
 
+
 .learn{
-    padding-top:.2rem;
+    padding-top:0;
     background: transparent;
     border: 2px solid white;
     width: 10rem;
@@ -540,16 +591,12 @@ footer div > div > a{
     border-radius: 2rem;
 }
 
+
 /*   MAIN   */
 
 /*   DESIGNED   */
 
-.designed h3{
-    margin: 4rem 0 3rem 0;
-    text-align: center;
-}
-
-.designed .computer{
+.designed {
     margin-top: 7rem;
     width:100%;
     display: flex;
@@ -558,14 +605,44 @@ footer div > div > a{
     justify-content: center;
 }
 
-.designed img, .computer img{
-    width:50%;
-}
-
-.designed div, .computer div{
+.designed div{
     text-align: center;
     margin-top: 2rem;
+    padding: 0;
+}
+
+.designedDiv{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    padding: 0 0 0 0;
+}
+
+.designed h3{
+    margin: 4rem 0 1rem 0;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.designed img{
+    position:relative;
+    right: -4.5rem;
+}
+
+.designedDiv div{
+    width: 90%;
+    text-align: left;
+    margin: 2rem 0 0 5rem;
     padding: 0 2rem 2rem 2rem;
+}
+
+.designedDiv div > div{
+    margin-bottom: 2rem;
+}
+
+.designedDiv div > div > h3{
+    font-size: 2rem;
 }
 
 /*   STATE   */
@@ -573,60 +650,104 @@ footer div > div > a{
 .state{
     background: url(images/bg-pattern-circles.svg), var(--texto--azul--oscuro);
     background-repeat: no-repeat;
-    background-size: 40rem 40rem;
-    background-position: 50% -16rem;
+    background-size: 55rem 55rem;
+    background-position: -35% -25rem;
     border-top-right-radius: 6rem;
     border-bottom-left-radius: 6rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:flex-end;
     justify-content: center;
     width: 100%;
-    text-align: center;
+    text-align: left;
     padding: 2rem;
     margin-top: 15rem;
     position:relative;
+    height: 50vh;
 }
 
 .state img{
-    width: 50%;
+    width: 35%;
     position:absolute;
-    bottom: 26rem;
+    bottom: -5rem;
+    left: 5rem;
 }
 
 .state h3{
     color: white;
-    font-size: 2.7rem;
-    margin-top: 13rem;
+    font-size: 2.3rem;
+    margin-top: 5rem;
+    margin-right: 12.5rem;
     margin-bottom: 0;
 }
 
 .state p{
     color: white;
     margin-top: 1rem;
+    margin-right: 11rem;
     margin-bottom: 5rem;
+    width: 40%;
 }
 
+/*   COMPUTER   */
+
+.computer{
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.computer img{
+    width: 70%;
+    position: absolute;
+    left: -15.5rem;
+}
+
+.computer div{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    text-align: left;
+    margin-top: 2rem;
+    padding: 0 2rem 2rem 2rem;
+}
+
+.computer div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
 
 /*   FOOTER   */
 
 footer{
     background: var(--texto--azul--oscuro);
+    padding-top: 3rem;
+    padding-right: 10rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-around;
     border-top-right-radius: 7rem;
 }
 
 footer img{
-    margin: 4rem 0;
+    margin: 0 0;
 }
 
 footer div{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 2rem;
 }
 
@@ -645,5 +766,15 @@ footer div > div > a{
     font-size: 1.2rem;
     font-weight: 600;
 }
+
+footer div > div > a:focus{
+    color: rgb(153, 153, 153);
+}
+
+footer div > div > a:hover{
+    color: rgb(153, 153, 153);
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+
 
 }
